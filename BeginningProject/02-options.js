@@ -12,5 +12,6 @@ export let options={
 
 export default function(){
 
-    http.get('https://www.google.com')
+    http.get('https://www.google.com');
+    http.get('https://www.wikipedia.com')
 }
