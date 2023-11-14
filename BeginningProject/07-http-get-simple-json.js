@@ -18,4 +18,14 @@ export default function(){
         'is status is 200' : (r) => r.status===200
 
     })
+
+    let body=JSON.parse(response.body);
+
+
+    console.log(`response body is ${JSON.stringify(body)}`);
+    console.log(`Message is ${body.Message}`);
+
+    check(response,{
+        'is Message is Success:' :(r) => JSON.parse(r.body).Message === "Data Fetched successfully" 
+    })
 }
