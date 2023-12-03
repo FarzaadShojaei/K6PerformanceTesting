@@ -6,6 +6,8 @@ import { Rate} from 'k6/metrics';
 export let errorRate=new Rate('errors')
 var getApiTrend=new Trend("TREND_Get_Api_Duration");
 var getApiTrendWaiting=new Trend("TREND_Get_Api_Waiting")
+var googlegetApiTrend=new Trend("TREND_Google_GET_API_Duration")
+var googlegetApiTrendWaiting=new Trend("TREND_Google_Get_Api_Waiting")
 
 export let options={
 thresholds:{
@@ -25,6 +27,11 @@ export default function(){
   })
 errorRate.add(!check1);
 getApiTrend.add(response.timings.duration)
+getApiTrendWaiting.add(response.timings.waiting)
+
+
+
+const googleResponse=http.get('https://www.google.com/');
 
 const check2=check(response,{
 
