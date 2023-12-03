@@ -4,6 +4,8 @@ import { Rate} from 'k6/metrics';
 
 
 export let errorRate=new Rate('errors')
+var getApiTrend=new Trend("TREND_Get_Api_Duration");
+var getApiTrendWaiting=new Trend("TREND_Get_Api_Waiting")
 
 export let options={
 thresholds:{
@@ -22,6 +24,7 @@ export default function(){
     'body size is 0 bytes :' :(r)=> r.body.length ==0
   })
 errorRate.add(!check1);
+getApiTrend.add(response.timings.duration)
 
 const check2=check(response,{
 
