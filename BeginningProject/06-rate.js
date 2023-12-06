@@ -28,10 +28,13 @@ export default function(){
 errorRate.add(!check1);
 getApiTrend.add(response.timings.duration)
 getApiTrendWaiting.add(response.timings.waiting)
+googlegetApiTrendWaiting.add(response.duration.waiting)
 
 
 
 const googleResponse=http.get('https://www.google.com/');
+googlegetApiTrend.add(googleResponse.timings.duration)
+googlegetApiTrendWaiting.add(googleResponse.duration.waiting)
 
 const check2=check(response,{
 
