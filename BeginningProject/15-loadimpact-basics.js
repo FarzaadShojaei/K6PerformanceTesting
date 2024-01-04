@@ -24,4 +24,13 @@ export default function(){
     errorRate.add(!checkApi1)
 }
 
+ext: {
+  loadimpact:{
+    projectID:343433
+
+    
+  }
+
+}
+
 
