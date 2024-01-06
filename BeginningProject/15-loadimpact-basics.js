@@ -14,6 +14,15 @@ export let options={
 
 }
 
+ext: {
+  loadimpact:{
+    projectID:343433
+
+    
+  }
+
+}
+
 export default function(){
     const response=http.get('https://run.mocky.io/v3/06037804-8e27-4b42-ac00-79f0bf3a5005');
     const checkApi1=check(response,{
@@ -24,13 +33,9 @@ export default function(){
     errorRate.add(!checkApi1)
 }
 
-ext: {
-  loadimpact:{
-    projectID:343433
 
-    
-  }
 
-}
+
+
 
 
