@@ -10,5 +10,4 @@ Locally Clone project
 
 Done !
 
-## Write and Execute Sample test
 
