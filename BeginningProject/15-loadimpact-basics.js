@@ -17,14 +17,9 @@ export let options={
 
 }
 
-ext: {
-  loadimpact:{
-    projectID:343433
 
-    
-  }
 
-}
+
 
 function groupWithMetrics(nameOgGroup,groupFunction){
  let start=new Date();
